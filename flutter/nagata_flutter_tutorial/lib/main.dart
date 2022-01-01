@@ -32,6 +32,7 @@ class RandomWordsState extends State<RandomWords> {
 
         final index = i ~/ 2;
         if (index >= _suggestions.length) {
+          // 生成されたワードの数がインデックス番号以上であれば、ワードが再生成される。
           _suggestions.addAll(generateWordPairs().take(10));
         }
         return _buildRow(_suggestions[index]);
