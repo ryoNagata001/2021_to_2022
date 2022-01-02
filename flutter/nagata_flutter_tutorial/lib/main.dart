@@ -1,13 +1,17 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  // debugPaintSizeEnabled = true;
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final wordPair = WordPair.random();
-    return MaterialApp(title: 'Startup Name Generator', home: RandomWords());
+    return MaterialApp(title: 'Tutorial', home: RandomWords());
   }
 }
 
@@ -18,7 +22,7 @@ class RandomWordsState extends State<RandomWords> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Startup Name Generator'),
+        title: Text('Tutorial'),
       ),
       body: _buildSuggestions(),
     );
